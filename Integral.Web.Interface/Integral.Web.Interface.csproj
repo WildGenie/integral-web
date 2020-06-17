@@ -2,4 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Integral.Interface" Version="0.0.1" />
+  </ItemGroup>
 </Project>

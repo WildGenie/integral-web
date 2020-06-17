@@ -3,12 +3,13 @@
     <RootNamespace>Integral</RootNamespace>  
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/c-sharpie</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/c-sharpie/integral-library</RepositoryUrl>	
+    <RepositoryUrl>https://github.com/c-sharpie/integral-web</RepositoryUrl>	
+	<PackageProjectUrl>https://github.com/c-sharpie</PackageProjectUrl>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>CSharpie LLC</Copyright>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
+    <Copyright>CSharpie LLC</Copyright>
+	<Authors>CSharpie LLC</Authors>
     <LangVersion>8.0</LangVersion>
 	<Nullable>enable</Nullable>
     <Version>0.0.0</Version>
