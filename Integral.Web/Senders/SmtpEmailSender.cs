@@ -1,23 +1,24 @@
 ﻿using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using Integral.Options;
 
 namespace Integral.Senders
 {
     public sealed class SmtpEmailSender : EmailSender
     {
-        private static readonly MailAddress mailAddress = new MailAddress("todo", "todo");
+        private readonly MailAddress mailAddress;
 
-        private string username, password, host;
+        private readonly SmtpClient smtpClient = new SmtpClient();
 
-        private int port;
-
-        public SmtpEmailSender(string username, string password, string host, int port)
+        public SmtpEmailSender(EmailSenderOptions emailSenderOptions)
         {
-            this.username = username;
-            this.password = password;
-            this.host = host;
-            this.port = port;
+            this.mailAddress = new MailAddress(emailSenderOptions.Address, emailSenderOptions.Display);
+            this.smtpClient.Credentials = new NetworkCredential(emailSenderOptions.Username, emailSenderOptions.Password);
+            this.smtpClient.EnableSsl = emailSenderOptions.EnableSsl;
+            this.smtpClient.Timeout = emailSenderOptions.Timeout;
+            this.smtpClient.Host = emailSenderOptions.Host;
+            this.smtpClient.Port = emailSenderOptions.Port;
         }
 
         public async Task Send(string email, string subject, string body)
@@ -28,12 +29,7 @@ namespace Integral.Senders
             mailMessage.Subject = subject;
             mailMessage.Body = body;
             mailMessage.IsBodyHtml = true;
-
-            SmtpClient smtpClient = new SmtpClient(host, port);
-            smtpClient.Credentials = new NetworkCredential(username, password);
-            smtpClient.EnableSsl = false;
-            smtpClient.Timeout = 10000;
-            await smtpClient.SendMailAsync(mailMessage);
+            await this.smtpClient.SendMailAsync(mailMessage);
         }
     }
 }
