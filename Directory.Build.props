@@ -12,6 +12,6 @@
 	<Authors>CSharpie LLC</Authors>
     <LangVersion>8.0</LangVersion>
 	<Nullable>enable</Nullable>
-    <Version>0.0.0</Version>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 </Project>
