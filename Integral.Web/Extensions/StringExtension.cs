@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace Integral.Functions
+namespace Integral.Extensions
 {
     public static class StringExtension
     {
