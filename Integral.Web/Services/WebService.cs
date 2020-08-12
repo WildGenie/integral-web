@@ -11,10 +11,6 @@ namespace Integral.Services
             where Initializer : WebApplication => await Host.CreateDefaultBuilder(arguments).ConfigureWebHostDefaults(Configure<Initializer>).Build().RunAsync();
 
         private static void Configure<Initializer>(IWebHostBuilder webHostBuilder)
-            where Initializer : WebApplication
-        {
-            //webHostBuilder.UseKestrel();
-            webHostBuilder.UseStartup<Initializer>();
-        }
+            where Initializer : WebApplication => webHostBuilder.UseStartup<Initializer>();
     }
 }
