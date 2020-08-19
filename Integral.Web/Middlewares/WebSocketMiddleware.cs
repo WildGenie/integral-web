@@ -9,7 +9,7 @@ namespace Integral.Middlewares
     {
         private readonly RequestDelegate requestDelegate;
 
-        internal WebSocketMiddleware(RequestDelegate requestDelegate) => this.requestDelegate = requestDelegate;
+        public WebSocketMiddleware(RequestDelegate requestDelegate) => this.requestDelegate = requestDelegate;
 
         public async Task InvokeAsync(HttpContext httpContext, Consumer<WebSocket> consumer)
         {
