@@ -1,25 +1,14 @@
-﻿using System;
-using System.Net.WebSockets;
+﻿using Integral.Middlewares;
 using Microsoft.AspNetCore.Builder;
 
 namespace Integral.Extensions
 {
     public static class ApplicationBuilderExtension
     {
-        public static void UseWebSockets(this IApplicationBuilder applicationBuilder, Action<WebSocket> accept, WebSocketOptions webSocketOptions)
+        public static void UseWebSocketMiddleware(this IApplicationBuilder applicationBuilder)
         {
-            applicationBuilder.UseWebSockets(webSocketOptions);
-            applicationBuilder.Use(async (context, next) =>
-            {
-                if (context.WebSockets.IsWebSocketRequest)
-                {
-                    accept(await context.WebSockets.AcceptWebSocketAsync());
-                }
-                else
-                {
-                    await next();
-                }
-            });
+            applicationBuilder.UseWebSockets();
+            applicationBuilder.UseMiddleware<WebSocketMiddleware>();
         }
     }
 }
