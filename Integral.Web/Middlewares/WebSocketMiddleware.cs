@@ -11,12 +11,12 @@ namespace Integral.Middlewares
 
         public WebSocketMiddleware(RequestDelegate requestDelegate) => this.requestDelegate = requestDelegate;
 
-        public async Task InvokeAsync(HttpContext httpContext, Consumer<WebSocket> consumer)
+        public async Task InvokeAsync(HttpContext httpContext, Consumer<WebSocket, Task> consumer)
         {
             WebSocketManager webSocketManager = httpContext.WebSockets;
             if (webSocketManager.IsWebSocketRequest)
             {
-                consumer.Consume(await webSocketManager.AcceptWebSocketAsync());
+                await consumer.Consume(await webSocketManager.AcceptWebSocketAsync());
             }
             else
             {

@@ -1,17 +1,19 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
+  <PropertyGroup> 
     <RootNamespace>Integral</RootNamespace>  
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/c-sharpie/integral-web</RepositoryUrl>	
-	<PackageProjectUrl>https://github.com/c-sharpie</PackageProjectUrl>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/c-sharpie</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSymbols>true</IncludeSymbols>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
     <Copyright>CSharpie LLC</Copyright>
-	<Authors>CSharpie LLC</Authors>
+    <Authors>CSharpie LLC</Authors>
     <LangVersion>8.0</LangVersion>
-	<Nullable>enable</Nullable>
-    <Version>0.0.7</Version>
+    <Nullable>enable</Nullable>
+    <Version>0.0.8</Version>
   </PropertyGroup>
 </Project>
