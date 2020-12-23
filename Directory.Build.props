@@ -3,17 +3,17 @@
     <RootNamespace>Integral</RootNamespace>  
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <RepositoryUrl>https://github.com/c-sharpie/integral-web</RepositoryUrl>	
-    <PackageProjectUrl>https://github.com/c-sharpie</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/javascribble/integral-web</RepositoryUrl>	
+    <PackageProjectUrl>https://github.com/javascribble</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <IncludeSymbols>true</IncludeSymbols>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
-    <Copyright>CSharpie LLC</Copyright>
-    <Authors>CSharpie LLC</Authors>
+    <Copyright>Javascribble LLC</Copyright>
+    <Authors>Javascribble LLC</Authors>
     <LangVersion>9.0</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>0.0.11</Version>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 </Project>
