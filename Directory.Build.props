@@ -12,7 +12,7 @@
     <RepositoryType>git</RepositoryType>
     <Copyright>Javascribble LLC</Copyright>
     <Authors>Javascribble LLC</Authors>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <Version>1.0.0</Version>
   </PropertyGroup>
